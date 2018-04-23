@@ -1,11 +1,14 @@
 # Checkpoint-3
---which student has the sat_math score over 700?
-```SELECT sat_math, student_id
- FROM datasets.sat_scores
- WHERE sat_math >=700
- ORDER BY sat_math ASC
+--Do NFL fans know more about who the best quarterbacks are?
+```select
+qb,
+avg(game_points) as avg_points
+from datasets.qbstats_1996_2016
+group by qb
+order by avg_points DESC
+
 ```
-![ICA4_Perlie](sat_math.png)
+![Checkpoint#3](Picture1.png)
 
 --rank the student from highest to lowest by sat_verbal?
 ```SELECT sat_verbal, student_id
