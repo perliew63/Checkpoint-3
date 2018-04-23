@@ -1,4 +1,7 @@
 # Checkpoint-3
+## Description of datasets.sat_scores
+This dataset gives information on every NFL game and every passer over 5000 regular season games from 1996 to 2016. The excel files supplies us with over ten thousand quarterbacks’ names over 21 years and specifies the success of each one. Each year contains every single game from that season and gives statistics like completions, attempts, yards, and an overall rating for the quarterback for that game.
+
 --Do NFL fans know more about who the best quarterbacks are?
 ```select
 qb,
