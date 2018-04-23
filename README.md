@@ -10,12 +10,19 @@ order by avg_points DESC
 ```
 ![Checkpoint#3](Picture1.png)
 
---rank the student from highest to lowest by sat_verbal?
-```SELECT sat_verbal, student_id
- FROM datasets.sat_scores
- ORDER BY sat_verbal DESC
+--Who were the top 10 highest rating quarterbacks?
+```sql
+select
+qb,
+rate
+from datasets.qbstats_1996_2016
+Where rate is NOT NULL
+group by qb,rate
+order by rate DESC
+Limit 10
+
 ```
-![ICA4_Perlie](satverbal.png)
+![Checkpoint#3](Picture2.png)
 
 --rank the students’ school from highest to lowest by hrs_studied
 ```SELECT school, hrs_studied
