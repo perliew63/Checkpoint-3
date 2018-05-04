@@ -3,7 +3,7 @@
 This dataset gives information on every NFL game and every passer over 5000 regular season games from 1996 to 2016. The excel files supplies us with over ten thousand quarterbacks’ names over 21 years and specifies the success of each one. Each year contains every single game from that season and gives statistics like completions, attempts, yards, and an overall rating for the quarterback for that game.
 
 ## Question 1
---Do NFL fans know more about who the best quarterbacks are?
+--Which quarterback have the highest game points? 
 ```sql
 select
 qb,
@@ -72,14 +72,15 @@ Order by year DESC
 ## Question 6
 --Who throw longest in 2016?
 ```sql
-Select qb, count(lg) as longest_throw
+Select qb, 
+lg 
 From datasets.qbstats_1996_2016
 Where year = 2016
 Group by qb
 Order by longest_throw DESC
 
 ```
-![Checkpoint#3](Picture6.png)!
+
 
 ## Question 7
 --Who had the most touchdowns (td) in 2016?
@@ -121,3 +122,4 @@ Where year = 2016
 Group by qb
 Order by times DESC
 ```
+![Checkpoint#3](Picture10.png)
